@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Universal Variabel */
+:root{
+    --paddingSearchbar: 14px;
+    --searchBarcolor: #f3f3f3;
+    --searchBarfocus: #f1f1f1;
+    
+    --primaryBackgroundColor:#fff;
+    --secondaryBackgroundColor:#f3f3f3;
+    --thirdBackgroundColor:#f3f7fe;
+
+    --paddingSection: 6rem 0;
+    --itemBorderRadius: 0.7rem;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Menu */
+#menu-container{
+    display: flex;
+    padding: 0px 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(25, 133, 249);
+}
+.logo img {
+    height: 4rem;
+    padding: 5px 5px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+nav ul li {
+    padding: 0px 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: var(--itemBorderRadius);
+}
+nav ul li:hover{
+    color: rgba(0 0 0 0.25 );
+    background-color: var(--thirdBackgroundColor);
+}    
+    
+a { 
+    text-decoration: none;
+    color: aliceblue;
+}
+a:hover{
+    color:rgba(0, 0, 0, 0.731);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 3px var(--paddingSearchbar);
+    border-radius: 28px;
+    background-color: var(--searchBarcolor);
+    transition: box-shadow 0.25s;
+}
+search-bar:focus-within{
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+ 
+.Search-input{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.Search-input::placeholder,
+.Search-submit{
+    color: rgba(0, 0, 0, 0.25);
+}
+#Home{
+   background-color: var(--primaryBackgroundColor);
+   display: flex;
+   align-content: center;
+   padding: var(--paddingSection);
+}
+
+.left-section{
+    width: 50%;
+}
+
+.left-section h1{
+    color:rgb(25, 133, 249);
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.left-section h1, 
+.left-section h3 {
+    padding: 0px 3rem;
+    text-align:center;
+} 
+
+.left-section p{
+    padding: 2.6rem 2.6rem;
+    text-align: justify;
+}
+
+
+.left-section p {
+    border: solid 2px rgba(0, 0, 0, 0.25);
+    margin: 2.4rem;
+    border-radius: 10px;
+    background-color: var(--thirdBackgroundColor);
+
+}
+
+
+.right-section img{
+    width: 100%;
+    height: auto;
+}
+
