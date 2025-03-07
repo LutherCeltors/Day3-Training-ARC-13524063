@@ -8,9 +8,21 @@ const PORT = 3000;
 app.use(express.static(path.join(__dirname, "public")));
 
 // Endpoint untuk menampilkan halaman HTML
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "index.html"));
 });
+
+app.get("/daftarbuku", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "daftarbuku.html"));
+})
+
+app.get("/kategori", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "kategori.html"));
+})
+
+app.get("/hubungikami", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "hubungikami.html"));
+})
 
 // Menjalankan server
 app.listen(PORT, () => {
